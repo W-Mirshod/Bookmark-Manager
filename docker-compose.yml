@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  bookmark-manager:
+    build: .
+    container_name: bookmark-manager
+    ports:
+      - "50103:80"
+    networks:
+      - web
+
+networks:
+  web:
+    external: true

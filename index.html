@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-title">Bookmark Manager</div>
+        <div class="navbar-user">W Mirshod</div>
+    </nav>
+    <div class="container">
+        <form id="bookmark-form">
+            <input type="text" id="bookmark-title" placeholder="Title" required>
+            <input type="url" id="bookmark-url" placeholder="URL" required>
+            <input type="text" id="bookmark-tags" placeholder="Tags (comma separated)">
+            <button type="submit" class="primary">Add Bookmark</button>
+        </form>
+        <div class="controls">
+            <input type="text" id="search" placeholder="Search bookmarks">
+            <select id="sort">
+                <option value="date">Sort by Date</option>
+                <option value="title">Sort by Title</option>
+            </select>
+            <button id="export">Export</button>
+            <input type="file" id="import" style="display:none">
+            <button id="import-btn">Import</button>
+            <button id="open-all">Open All</button>
+        </div>
+        <div id="tags-filter"></div>
+        <ul id="bookmark-list"></ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
