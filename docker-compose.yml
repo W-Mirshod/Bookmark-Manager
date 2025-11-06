@@ -3,8 +3,8 @@ services:
   bookmark-manager:
     build: .
     container_name: bookmark-manager
-    expose:
-      - "80"
+    ports:
+      - "8083:80"
     networks:
       - web
 
